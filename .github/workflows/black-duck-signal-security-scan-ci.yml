@@ -41,7 +41,7 @@ jobs:
     - name: Signal Scan
       run: |
         curl -fLsS -o bridge.zip ${{ vars.BRIDGECLI_LINUX64 }} && unzip -qo -d ${{ runner.temp }} bridge.zip && rm -f bridge.zip
-        ${{ runner.temp }}/bridge-cli-bundle-linux64/bridge-cli --verbose --stage signal signal.mode=PROJECT signal.platform=polaris signal.args="--llm-mode byo --llm-singlefilescan-agent-model claude-opus-4-6 --llm-dataflow-agent-model claude-opus-4-6 --llm-oversight-agent-model claude-opus-4-6 --llm-exploitation-agent-model claude-opus-4-6 --llm-sca-agent-model claude-sonnet-4-6 --llm-mergekey-embed-agent-model text-embedding-3-large --llm-oversight-embed-agent-model text-embedding-3-large"
+        ${{ runner.temp }}/bridge-cli-bundle-linux64/bridge-cli --verbose --stage signal signal.mode=PROJECT signal.platform=polaris signal.args="--llm-mode byo --llm-singlefilescan-agent-model claude-opus-4-7 --llm-dataflow-agent-model claude-opus-4-7 --llm-oversight-agent-model claude-opus-4-7 --llm-exploitation-agent-model claude-opus-4-7 --llm-sca-agent-model claude-sonnet-4-6 --llm-mergekey-embed-agent-model text-embedding-3-large --llm-oversight-embed-agent-model text-embedding-3-large"
     
 #    - name: Upload SARIF file
 #      uses: github/codeql-action/upload-sarif@f205ea1c3313d32999d8d6a48b4f6530d4437b38 # v4.37.4
